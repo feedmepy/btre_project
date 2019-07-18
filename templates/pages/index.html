@@ -31,7 +31,7 @@
                   <label class="sr-only">State</label>
                   <select name="state" class="form-control">
                     <option selected="true" disabled="disabled">State (All)</option>
-                      {% for k, value in state_choices.items %}
+                      {% for key, value in state_choices.items %}
                         <option value="{{ key }}">{{ value }}</option>
                       {% endfor %}
                   </select>
@@ -43,7 +43,7 @@
                   <label class="sr-only">Bedrooms</label>
                   <select name="bedrooms" class="form-control">
                     <option selected="true" disabled="disabled">Bedrooms (All)</option>
-                      {% for k, value in bedroom_choices.items %}
+                      {% for key, value in bedroom_choices.items %}
                         <option value="{{ key }}">{{ value }}</option>
                       {% endfor %}            
                   </select>
@@ -51,7 +51,7 @@
                 <div class="col-md-6 mb-3">
                   <select name="price" class="form-control" id="type">
                     <option selected="true" disabled="disabled">Max Price (Any)</option>
-                      {% for k, value in price_choices.items %}
+                      {% for key, value in price_choices.items %}
                           <option value="{{ key }}">{{ value }}</option>
                       {% endfor %} 
                   </select>
