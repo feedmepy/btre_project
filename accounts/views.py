@@ -73,4 +73,4 @@ def dashboard(request):
 #		'contacts': user_contacts
 #	}
 
-	return render(request, 'accounts/dashboard.html', context)
+	return render(request, 'accounts/dashboard.html')
