@@ -78,12 +78,12 @@
     <div class="container">
       <h3 class="text-center mb-3">Latest Listings</h3>
       <div class="row">
-
         {% if listings %}
           {% for listing in listings %}
+            <!-- Listing 1 -->
             <div class="col-md-6 col-lg-4 mb-4">
               <div class="card listing-preview">
-                <img class="card-img-top" src="{{listings.photo_main.url}}" alt="">
+                <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
                     <span class="badge badge-secondary text-white">${{ listing.price | intcomma }}</span>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="card-body">
                   <div class="listing-heading text-center">
-                    <h4 class="text-primary">{{listing.title}}</h4>
+                    <h4 class="text-primary">{{ listing.title }}</h4>
                     <p>
                       <i class="fas fa-map-marker text-secondary"></i> {{ listing.city }} {{ listing.state }}, {{ listing.zipcode }}</p>
                   </div>
@@ -124,18 +124,16 @@
             </div>
           {% endfor %}
         {% else %}
-
-          <div>
+          <div class="col-md-12">
             <p>No Listings Available</p>
           </div>
         {% endif %}
-
 
       </div>
     </div>
   </section>
 
-  <section id="services" class="py-5 bg-secondary text-white">
+<section id="services" class="py-5 bg-secondary text-white">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-4">
@@ -162,5 +160,4 @@
       </div>
     </div>
   </section>
-
 {% endblock %}
